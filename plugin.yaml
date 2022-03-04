@@ -1,0 +1,16 @@
+plugin:
+    name: 'eugene3993.seolight::lang.plugin.name'
+    description: 'eugene3993.seolight::lang.plugin.description'
+    author: Eugene3993
+    icon: oc-icon-sitemap
+    homepage: ''
+permissions:
+    eugene3993.seolight.sitemap:
+        tab: 'Seo light plugin by Eugene3993'
+        label: 'eugene3993.seolight::lang.permissions.labels.sitemap'
+    eugene3993.seolight.meta:
+        tab: 'Seo light plugin by Eugene3993'
+        label: 'eugene3993.seolight::lang.permissions.labels.meta'
+    eugene3993.seolight.settings:
+        tab: 'Seo light plugin by Eugene3993'
+        label: 'eugene3993.seolight::lang.permissions.labels.settings'

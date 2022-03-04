@@ -1,0 +1,76 @@
+meta_title:
+  comment: Page title
+  label: eugene3993.seolight::lang.config.meta_title
+  type: text
+  span: full
+  tab: Meta
+  attributes:
+    data-seo: title
+    data-counter: 1
+    data-min: 30
+    data-max: 60
+
+meta_description:
+  comment: Page description
+  label: eugene3993.seolight::lang.config.meta_description
+  cssClass: char-counter
+  type: textarea
+  size: tiny
+  span: full
+  tab: Meta
+  attributes:
+    data-seo: description
+    data-counter: 1
+    data-min: 100
+    data-max: 160
+
+canonical_url:
+  label: Canonical URL
+  type: text
+  tab: Meta
+  span: full
+
+use_in_sitemap:
+  label: eugene3993.seolight::lang.config.use_in_sitemap
+  default: false
+  type: switch
+  tab: Sitemap
+  span: auto
+
+model_class:
+  comment: eugene3993.seolight::lang.config.model_class.comment
+  label: eugene3993.seolight::lang.config.model_class.label
+  tab: Sitemap
+  type: text
+  span: auto
+
+priority:
+  label: eugene3993.seolight::lang.config.priority
+  type: dropdown
+  tab: Sitemap
+  span: left
+  options:
+    1.0: '1.0'
+    0.9: '0.9'
+    0.8: '0.8'
+    0.7: '0.7'
+    0.6: '0.6'
+    0.5: '0.5'
+    0.4: '0.4'
+    0.3: '0.3'
+    0.2: '0.2'
+    0.1: '0.1'
+
+changefreq:
+  label: eugene3993.seolight::lang.config.changefreq
+  type: dropdown
+  tab: Sitemap
+  span: left
+  options:
+    always: 'always'
+    hourly: 'hourly'
+    daily: 'daily'
+    weekly: 'weekly'
+    monthly: 'monthly'
+    yearly: 'yearly'
+    never: 'never'

@@ -1,0 +1,9 @@
+{% set self = __SELF__ %}
+{% set settings = __SELF__.settings %}
+<!-- EUGENE3993.SEO -->
+<title>{{ viewBag.meta_title | default(viewBag.title) }}</title>
+<meta name="description" content="{{ viewBag.meta_description|default(settings.stock_description) }}" />
+{% if settings.use_canonical %}
+	<link rel="canonical" href="{{ viewBag.canonical_url|default(this.page.id)|page }}">
+{% endif %}
+<!-- EUGENE3993.SEO -->
