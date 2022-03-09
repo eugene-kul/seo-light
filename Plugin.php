@@ -2,15 +2,30 @@
 
 use System\Classes\PluginBase;
 use System\Classes\SettingsManager;
+use Eugene3993\Seolight\Classes\Helper;
 use System\Classes\PluginManager;
 use Cms\Classes\Theme;
+use Request;
 use Lang;
 
 class Plugin extends PluginBase {
 
+    public $require = [
+        'VojtaSvoboda.TwigExtensions',
+    ];
+
     public function registerComponents() {
         return [
             'Eugene3993\Seolight\Components\Meta' => 'META',
+        ];
+    }
+
+    public function registerMarkupTags() {
+        $helper = new Helper();
+        return [
+            'filters' => [
+                'url' => [$helper, 'url'],
+            ]
         ];
     }
 
@@ -46,6 +61,15 @@ class Plugin extends PluginBase {
                     ]), 'primary');
                 }
 
+                if (PluginManager::instance()->hasPlugin('RainLab.Blog')
+                    && $widget->model instanceof \RainLab\Blog\Models\Post) {
+                        $widget->addFields( array_except($this->blogSeoFields(), [
+                            'metadata[model_class]',
+                            'metadata[changefreq]',
+                            'metadata[priority]',
+                        ]), 'secondary');
+                }
+
                 if (!$widget->model instanceof \Cms\Classes\Page) return;
 
                 $widget->removeField('settings[meta_title]');
@@ -54,6 +78,12 @@ class Plugin extends PluginBase {
             }
 
         });
+    }
+
+    private function blogSeoFields() {
+        return collect($this->seoFields())->mapWithKeys(function($item, $key) {
+            return ["metadata[$key]" => $item];
+        })->toArray();
     }
 
     private function staticSeoFields() {

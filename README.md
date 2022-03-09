@@ -10,13 +10,18 @@ The plugin adds functionality to Standard Meta tags and generates Sitemap and Ro
 - File generation sitemap.xml and robots.txt
 - Add a dynamic list of pages to a file Sitemap.xml. For example, pages created using the **Builder plugin** or **Pages plugin**
 
-#### Some functions are available only in the paid version of the plugin:
+#### Some functions are available only in the PRO version of the plugin:
 
 - Close any page from indexing using robots meta tags
 - Add the company name at the beginning or at the end of all headings
 - Generation of Open Graph micro markup
-- Add twig variables to the Title and Description fields
+- SEO meta tag fields support twig syntax
 - Insert third-party Meta tags or a third-party script into \<head>
+
+---
+
+#### PRO version of the plugin:
+- [SEO PRO Plugin](https://octobercms.com/plugin/eugene3993-seo)
 
 ---
 
@@ -27,6 +32,8 @@ You need to connect the components and insert them in the right place in the cod
 ```bash
 {% component 'META' %}
 ```
+
+For pages that have a 'blogPost' component, blog pages are generated based on the variable in the Sitemap tab and the variable 'published'.
 
 ---
 

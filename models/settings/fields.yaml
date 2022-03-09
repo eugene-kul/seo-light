@@ -12,6 +12,15 @@ tabs:
             span: auto
             type: switch
             default: false
+        sitemap_preview:
+            tab: Settings
+            type: partial
+            path: $/eugene3993/seolight/models/settings/_sitemap_preview.htm
+            span: auto
+            trigger:
+                action: show
+                field: enable_sitemap
+                condition: checked
         stock_description:
             tab: Settings
             label: 'eugene3993.seolight::lang.settings.stock_description.label'
@@ -25,6 +34,15 @@ tabs:
             span: auto
             type: switch
             default: false
+        robots_preview:
+            tab: Robots.txt
+            type: partial
+            path: $/eugene3993/seolight/models/settings/_robots_preview.htm
+            span: left
+            trigger:
+                action: show
+                field: enable_robots_txt
+                condition: checked
         robots_txt:
             tab: Robots.txt
             label: robots.txt
@@ -37,12 +55,3 @@ tabs:
                 condition: checked
             type: codeeditor
             default: "User-agent: *\r\nAllow: /\r\r\nSitemap: $domain/sitemap.xml"
-        link_block:
-            tab: Robots.txt
-            type: partial
-            path: $/eugene3993/seolight/models/settings/_html.htm
-            span: auto
-            trigger:
-                action: show
-                field: enable_robots_txt
-                condition: checked
