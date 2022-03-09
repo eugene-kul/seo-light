@@ -8,7 +8,7 @@ The plugin adds functionality to Standard Meta tags and generates Sitemap and Ro
 
 - Generation of meta tags (title, description, canonical)
 - File generation sitemap.xml and robots.txt
-- Add a dynamic list of pages to a file Sitemap.xml. For example, pages created using the **Builder plugin** or **Pages plugin**
+- Add a dynamic list of pages to a file Sitemap.xml. For example, pages created using the **Builder plugin**
 
 #### Some functions are available only in the PRO version of the plugin:
 
@@ -33,7 +33,10 @@ You need to connect the components and insert them in the right place in the cod
 {% component 'META' %}
 ```
 
-For pages that have a 'blogPost' component, blog pages are generated based on the variable in the Sitemap tab and the variable 'published'.
+If you have a custom model that you want to generate the links from, add the full class name of your model in the "Sitemap" tab of the **CMS page**.
+If the page has the `blogPost` component, you don't need to set the Model class.
+
+**Important!**: Make sure that all the necessary parameters are enabled on the settings page.
 
 ---
 
