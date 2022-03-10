@@ -10,6 +10,8 @@ use Lang;
 
 class Plugin extends PluginBase {
 
+   public $require = [];
+
     public function registerComponents() {
         return [
             'Eugene3993\Seolight\Components\Meta' => 'META',
